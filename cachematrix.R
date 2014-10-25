@@ -1,7 +1,7 @@
-## The 'makeCacheMatrix' function creates a special matrix object more like an OOP object
+## The 'makeCacheMatrix()' function creates a special matrix object more like an OOP object
 #with matrix and inverse as its properties/attributes with setters and getters methods
 #
-# The 'cacheSolve' takes the 'special' matrix object and solves for inverse of a 'data' matrix 
+# The 'cacheSolve()' takes the 'special' matrix object and solves for inverse of a 'data' matrix 
 #returns that inverse
 
 ## creates a special matrix object with setters and getters methods for caching and retrieving
@@ -46,7 +46,7 @@ cacheSolve <- function(x, ...) {
     return ( NULL )
   }
   #check for cached inverse
-  if( ! is.null(x$getinverse() )){
+  if( ! is.null( x$getinverse() )){
     #check if matrix was changed
     if( identical( x$get() , data ) ){
       #no changes return cached inverse
